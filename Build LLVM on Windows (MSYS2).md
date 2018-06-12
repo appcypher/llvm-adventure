@@ -1,4 +1,4 @@
-### Building LLVM with MSYS2
+### Build LLVM on Windows (MSYS2)
 
 Taken from [valtron/llvm-stuff](https://github.com/valtron/llvm-stuff/wiki/Build-LLVM-with-MSYS2) with small edits.
 
