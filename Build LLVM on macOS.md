@@ -2,6 +2,9 @@
 
 1. Go to the folder where you want to build the LLVM source
 2. Download LLVM source ➡ `svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm`
+3. Move into `llvm/tools` and create folders ➡ `mkdir clang`
+4. Move into clang directory and download Clang source ➡ `svn co http://llvm.org/svn/llvm-project/cfe/trunk clang`
+6. Move back into the folder where the llvm source is downloaded ➡ `cd ../../`
 3. Create a directory where you want to build LLVM files ➡ `mkdir llvm-build`
 4. Move into the build folder ➡ `cd llvm-build`
     ```sh
