@@ -13,6 +13,8 @@ It's easier to install LLVM with `pacman` rather than building it yourself: `pac
 2. Download LLVM source and uncompress to folder `$LLVMSRC`
 3. Create folder `$LLVMBUILD` and create `build.sh` containing:
     ```sh
+    #!usr/bin/env sh
+    
     PATH="/c/Windows/system32:/c/msys64/mingw64/bin"
 
     LLVMSRC="/c/Users/Nypro/Desktop/llvm2/llvm-5.0.1.src"
