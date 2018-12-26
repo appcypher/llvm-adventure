@@ -6,7 +6,7 @@
 4. Move into clang directory and download Clang source ➡ `svn co http://llvm.org/svn/llvm-project/cfe/trunk clang`
 6. Move back into the folder where the llvm source is downloaded ➡ `cd ../../`
 3. Create a directory where you want to build LLVM files ➡ `mkdir llvm-build`
-4. Move into the build folder ➡ `cd llvm-build`
+4. Move into the build folder ➡ `cd llvm-build`; that's where you create and run the shell script.
     ```sh
     #!usr/bin/env sh
 
@@ -37,5 +37,10 @@
 9. Run the script ➡ `sh llvm-build.sh`
 
 Took about 40mins on my MacBook Pro (High Sierra, 2.3 GHz Intel Core i5, 16GB RAM)
+
+Try out the 
+  ```sh
+  path/to/llvm-build/bin/clang --target=wasm32 test.c -o test.wasm
+  ```
 
 Visit [llvm site](https://llvm.org/docs/GettingStarted.html) for more information.
