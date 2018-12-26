@@ -38,9 +38,9 @@
 
 Took about 40mins on my MacBook Pro (High Sierra, 2.3 GHz Intel Core i5, 16GB RAM)
 
-Try it out with 
+Try it out with: 
   ```sh
-  path/to/llvm-build/bin/clang --target=wasm32 test.c -o test.wasm
+  bin/llvm-build/bin/clang --target=wasm32 test.c -o test.wasm
   ```
 
 Visit [llvm site](https://llvm.org/docs/GettingStarted.html) for more information.
