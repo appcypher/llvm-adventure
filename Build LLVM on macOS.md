@@ -1,20 +1,17 @@
 ### Building LLVM on macOS
 
-1. Go to the folder where you want to build the LLVM source
-2. Download LLVM source 
-    - from `svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm`
-    - if you need to know the version, download it from `http://releases.llvm.org/download.html`
-    - unpack source `.tar.xz` using using `tar -xJf [archive]`
-3. Move into `llvm/tools` and create folders ➡ `mkdir clang`
-4. Move into clang directory and download Clang source ➡ `svn co http://llvm.org/svn/llvm-project/cfe/trunk clang`
-6. Move back into the folder where the llvm source is downloaded ➡ `cd ../../`
-3. Create a directory where you want to build LLVM files ➡ `mkdir llvm-7.0.1`
-4. Move into the build folder ➡ `cd llvm-7.0.1`; that's where you create and run the shell script.
+- Go to the folder where you want to build the LLVM source
+- Download LLVM source from `svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm` and unpack source `.tar.xz` with `tar -xJf [archive]`
+- Move into `llvm/tools` and create folders ➡ `mkdir clang`
+- Move into clang directory and download Clang source ➡ `svn co http://llvm.org/svn/llvm-project/cfe/trunk clang`
+- Move back into the folder where the llvm source is downloaded ➡ `cd ../../`
+- Create a directory where you want to build LLVM files ➡ `mkdir llvm-7.0.1`
+- Move into the build folder ➡ `cd llvm-7.0.1`; that's where you create and run the shell script.
     ```sh
     #!usr/bin/env sh
 
-    LLVMSRC="~/Desktop/Builds/llvm"
-    LLVMINS="~/Desktop/Builds/llvm-7.0.1"
+    LLVMSRC="~/Desktop/llvm-7.0.1.src"
+    LLVMINS="~/Desktop/llvm-7.0.1"
 
 
     cmake \
@@ -33,11 +30,11 @@
     cmake --build .
     cmake --build . --target install
     ```
-5. You may not have ninja installed, so if you have [brew](https://brew.sh/) installed (highly recommended), you  need to install it ninja with ➡ `brew install ninja`
-6. Customize the `LLVM_*` options according to your needs; they're documented [here](http://llvm.org/docs/CMake.html#llvm-specific-variables)
-7. The list of backends for `LLVM_TARGETS_TO_BUILD` is in `$LLVMSRC/CMakeLists.txt`, near `set(LLVM_ALL_TARGETS`.
-8. Save the script in a `build.sh` file
-9. Run the script ➡ `sh build.sh`
+- You may not have ninja installed, so if you have [brew](https://brew.sh/) installed (highly recommended), you  need to install it ninja with ➡ `brew install ninja`
+- Customize the `LLVM_*` options according to your needs. They are documented [here](http://llvm.org/docs/CMake.html#llvm-specific-variables)
+- The list of backends for `LLVM_TARGETS_TO_BUILD` is in `$LLVMSRC/CMakeLists.txt`, near `set(LLVM_ALL_TARGETS`.
+- Save the script in a `build.sh` file
+- Run the script ➡ `sh build.sh`
 
 Took about 40mins on my MacBook Pro (High Sierra, 2.3 GHz Intel Core i5, 16GB RAM)
 
