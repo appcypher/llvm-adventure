@@ -1,7 +1,7 @@
 ### Building LLVM on macOS
 
 - Go to the folder where you want to build the LLVM source
-- Download LLVM source from `svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm` and unpack source `.tar.xz` with `tar -xJf [archive]`
+- Download LLVM source from `http://releases.llvm.org/download.html` and unpack source `.tar.xz` with `tar -xJf [archive]`
 - Move into `llvm/tools` and create folders ➡ `mkdir clang`
 - Move into clang directory and download Clang source ➡ `svn co http://llvm.org/svn/llvm-project/cfe/trunk clang`
 - Move back into the folder where the llvm source is downloaded ➡ `cd ../../`
