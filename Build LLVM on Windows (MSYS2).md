@@ -12,7 +12,7 @@ It's easier to install LLVM with `pacman` rather than building it yourself: `pac
 - Go to the folder where you want to build the LLVM source
 - Download LLVM source from `http://releases.llvm.org/download.html`and unpack the source `.tar.xz` with `tar -xJf [archive]`.
 - Move into `llvm/tools` and create folders ➡ `mkdir clang`
-- Move into clang directory and download Clang source ➡ `svn co http://llvm.org/svn/llvm-project/cfe/trunk clang`
+- Move into clang directory and download and unpack Clang source there
 - Move back into the folder where the llvm source is downloaded ➡ `cd ../../`
 - Create a directory where you want to build LLVM files ➡ `mkdir llvm-7.0.1`
 - Move into the build folder ➡ `cd llvm-7.0.1`; that's where you create and run the shell script.
