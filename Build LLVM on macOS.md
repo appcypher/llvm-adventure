@@ -8,13 +8,13 @@
 3. Move into `llvm/tools` and create folders ➡ `mkdir clang`
 4. Move into clang directory and download Clang source ➡ `svn co http://llvm.org/svn/llvm-project/cfe/trunk clang`
 6. Move back into the folder where the llvm source is downloaded ➡ `cd ../../`
-3. Create a directory where you want to build LLVM files ➡ `mkdir llvm-build`
-4. Move into the build folder ➡ `cd llvm-build`; that's where you create and run the shell script.
+3. Create a directory where you want to build LLVM files ➡ `mkdir llvm-7.0.1`
+4. Move into the build folder ➡ `cd llvm-7.0.1`; that's where you create and run the shell script.
     ```sh
     #!usr/bin/env sh
 
     LLVMSRC="~/Desktop/Builds/llvm"
-    LLVMINS="~/Desktop/Builds/llvm-build"
+    LLVMINS="~/Desktop/Builds/llvm-7.0.1"
 
 
     cmake \
@@ -36,14 +36,14 @@
 5. You may not have ninja installed, so if you have [brew](https://brew.sh/) installed (highly recommended), you  need to install it ninja with ➡ `brew install ninja`
 6. Customize the `LLVM_*` options according to your needs; they're documented [here](http://llvm.org/docs/CMake.html#llvm-specific-variables)
 7. The list of backends for `LLVM_TARGETS_TO_BUILD` is in `$LLVMSRC/CMakeLists.txt`, near `set(LLVM_ALL_TARGETS`.
-8. Save the script in a `llvm-build.sh` file
-9. Run the script ➡ `sh llvm-build.sh`
+8. Save the script in a `build.sh` file
+9. Run the script ➡ `sh build.sh`
 
 Took about 40mins on my MacBook Pro (High Sierra, 2.3 GHz Intel Core i5, 16GB RAM)
 
 Try it out with: 
   ```sh
-  bin/llvm-build/bin/clang --target=wasm32 test.c -o test.wasm
+  bin/llvm-7.0.1/bin/clang --target=wasm32 test.c -o test.wasm
   ```
 
 Visit [llvm site](https://llvm.org/docs/GettingStarted.html) for more information.
