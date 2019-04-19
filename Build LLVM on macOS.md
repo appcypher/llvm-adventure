@@ -22,7 +22,7 @@
         -DCMAKE_INSTALL_PREFIX="$LLVMINS" \
         -DCMAKE_BUILD_TYPE="Release" \
         -DLLVM_TARGETS_TO_BUILD="X86;ARM" \
-        -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly \
+        # -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly \ # Only needed in llvm-6.x and below
         -DLLVM_INCLUDE_TESTS=OFF \
         -DLLVM_ENABLE_CXX1Y=ON \
         -DLLVM_ENABLE_ASSERTIONS=ON \
