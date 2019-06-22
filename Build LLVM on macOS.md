@@ -7,20 +7,18 @@
 - Move back into the folder where the llvm source is downloaded ➡ `cd ../../`
 - Create a directory where you want to build LLVM files ➡ `mkdir llvm-7.0.1`
 - Move into the build folder ➡ `cd llvm-7.0.1`; that's where you create and run the shell script.
-    ```sh
-    #!usr/bin/env sh
+    ```
+    sh#!usr/bin/env sh
 
-    LLVMSRC="~/Desktop/llvm-7.0.1.src"
-    LLVMINS="~/Desktop/llvm-7.0.1"
+    LLVMSRC="~/Desktop/llvm/llvm-8.0.0.src"
+    LLVMINS="~/Desktop/llvm/llvm-8.0.0"
 
 
     cmake \
         -G "Ninja" \
         -DCMAKE_INSTALL_PREFIX="$LLVMINS" \
         -DCMAKE_BUILD_TYPE="Release" \
-        -DLLVM_TARGETS_TO_BUILD="X86;ARM" \
-        # -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly \ # Only needed in llvm-6.x and below
-        -DLLVM_INCLUDE_TESTS=OFF \
+        -DLLVM_TARGETS_TO_BUILD="X86;ARM;Mips;AArch64;WebAssembly;PowerPC" \
         -DLLVM_ENABLE_CXX1Y=ON \
         -DLLVM_ENABLE_ASSERTIONS=ON \
         -DSPHINX_OUTPUT_HTML=OFF \
