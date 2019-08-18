@@ -7,8 +7,8 @@
 - Move back into the folder where the llvm source is downloaded ➡ `cd ../../`
 - Create a directory where you want to build LLVM files ➡ `mkdir llvm-7.0.1`
 - Move into the build folder ➡ `cd llvm-7.0.1`; that's where you create and run the shell script.
-    ```
-    sh#!usr/bin/env sh
+    ```sh
+    #!usr/bin/env sh
 
     LLVMSRC="~/Desktop/llvm/llvm-8.0.0.src"
     LLVMINS="~/Desktop/llvm/llvm-8.0.0"
